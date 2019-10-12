@@ -28,7 +28,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
-public class Drinks {
+public class Workers {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -39,34 +39,6 @@ public class Drinks {
     private String title;
 
     @Column
-    private String description;
+    private String position;
 
-    @Column
-    @NotNull
-    private String category;
-    
-    @Column
-    @NotNull
-    private Integer price;
-    
-    @Column
-    @NotNull
-    private Integer size;
-        
-    @Column
-    @NotNull
-    private Integer alcohol;
-        
-    @Column
-    @NotNull
-    private boolean isAvailable;
-
-    @Column(updatable = false)
-    @CreationTimestamp
-    private LocalDateTime created_at;
-
-    @Column
-    @UpdateTimestamp
-    private LocalDateTime updated_at;
-    
 }
