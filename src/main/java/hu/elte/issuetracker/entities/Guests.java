@@ -38,7 +38,6 @@ public class Guests {
     private String bill;
 
     @Column
-    @NotNull
     private String code;
     
 }

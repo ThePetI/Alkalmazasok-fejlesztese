@@ -54,12 +54,11 @@ public class Drinks {
     private Integer size_of_drink;
         
     @Column
-    @NotNull
     private Integer alcohol;
         
     @Column
     @NotNull
-    private boolean isAvailable;
+    private boolean is_available;
 
     @Column(updatable = false)
     @CreationTimestamp
@@ -70,3 +69,4 @@ public class Drinks {
     private LocalDateTime updated_at;
     
 }
+insert into Drinks (title, description, category, price, size_of_drink, alcohol, is_available, created_at, updated_at) values ('Staropramen', null, 'Sör', 690, 5, 5,  true, CURRENT_TIMESTAMP(),  CURRENT_TIMESTAMP());
