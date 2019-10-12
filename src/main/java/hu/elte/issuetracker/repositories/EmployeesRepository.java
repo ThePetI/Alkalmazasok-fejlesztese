@@ -5,7 +5,7 @@
  */
 package hu.elte.issuetracker.repositories;
 
-import hu.elte.issuetracker.entities.Guests;
+import hu.elte.issuetracker.entities.Employees;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
@@ -14,6 +14,6 @@ import org.springframework.stereotype.Repository;
  * @author Solti
  */
 @Repository
-public interface GuestsRepository extends CrudRepository<Guests, Integer> {
+public interface EmployeesRepository extends CrudRepository<Employees, Integer> {
 
 }

@@ -51,7 +51,7 @@ public class Drinks {
     
     @Column
     @NotNull
-    private Integer size;
+    private Integer size_of_drink;
         
     @Column
     @NotNull

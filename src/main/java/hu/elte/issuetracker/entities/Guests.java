@@ -35,10 +35,6 @@ public class Guests {
     private Integer id;
 
     @Column
-    @NotNull
-    private String title;
-
-    @Column
     private String bill;
 
     @Column

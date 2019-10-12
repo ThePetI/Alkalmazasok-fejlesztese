@@ -28,7 +28,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
-public class Workers {
+public class Employees {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -36,9 +36,9 @@ public class Workers {
 
     @Column
     @NotNull
-    private String title;
+    private String _name;
 
     @Column
-    private String position;
+    private String pos;
 
 }

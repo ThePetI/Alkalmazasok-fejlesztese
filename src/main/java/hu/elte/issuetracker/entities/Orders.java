@@ -30,8 +30,10 @@ import org.hibernate.annotations.UpdateTimestamp;
 @EqualsAndHashCode
 public class Orders {
 
-
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer order_id;
         
