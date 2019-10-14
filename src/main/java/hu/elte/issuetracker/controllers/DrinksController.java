@@ -7,7 +7,6 @@ package hu.elte.issuetracker.controllers;
 
 import hu.elte.issuetracker.entities.Drinks;
 import hu.elte.issuetracker.repositories.DrinksRepository;
-import hu.elte.issuetracker.security.AuthenticatedUser;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -27,21 +26,17 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/drinks")
 public class DrinksController {
-
     @Autowired
-    private DrinksRepository employeesRepository;
-    
-    @Autowired 
-    private AuthenticatedUser authenticatedUser;
+    private DrinksRepository drinksRepository;
     
     @GetMapping("")
     public ResponseEntity<Iterable<Drinks>> getAll() {
-        return ResponseEntity.ok(employeesRepository.findAll());
+        return ResponseEntity.ok(drinksRepository.findAll());
     }
     
     @GetMapping("/{id}")
     public ResponseEntity<Drinks> get(@PathVariable Integer id) {
-        Optional<Drinks> employees = employeesRepository.findById(id);
+        Optional<Drinks> employees = drinksRepository.findById(id);
         if (employees.isPresent()) {
             return ResponseEntity.ok(employees.get());
         } else {
@@ -51,16 +46,16 @@ public class DrinksController {
 
     @PostMapping("")
     public ResponseEntity<Drinks> post(@RequestBody Drinks employees) {
-        Drinks savedDrinks = employeesRepository.save(employees);
+        Drinks savedDrinks = drinksRepository.save(employees);
         return ResponseEntity.ok(savedDrinks);
     }
     
     @PutMapping("/{id}")
     public ResponseEntity<Drinks> put(@RequestBody Drinks employees, @PathVariable Integer id) {
-        Optional<Drinks> oDrinks = employeesRepository.findById(id);
+        Optional<Drinks> oDrinks = drinksRepository.findById(id);
         if (oDrinks.isPresent()) {
             employees.setId(id);
-            return ResponseEntity.ok(employeesRepository.save(employees));
+            return ResponseEntity.ok(drinksRepository.save(employees));
         } else {
             return ResponseEntity.notFound().build();
         }
@@ -68,9 +63,9 @@ public class DrinksController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity delete(@PathVariable Integer id) {
-        Optional<Drinks> oDrinks = employeesRepository.findById(id);
+        Optional<Drinks> oDrinks = drinksRepository.findById(id);
         if (oDrinks.isPresent()) {
-            employeesRepository.deleteById(id);
+            drinksRepository.deleteById(id);
             return ResponseEntity.ok().build();
         } else {
             return ResponseEntity.notFound().build();

@@ -29,7 +29,6 @@ import org.hibernate.annotations.UpdateTimestamp;
 @AllArgsConstructor
 @EqualsAndHashCode
 public class Drinks {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -37,6 +36,10 @@ public class Drinks {
     @Column
     @NotNull
     private String title;
+    
+    @Column
+    @NotNull
+    private String imageUrl;
 
     @Column
     private String description;
@@ -69,4 +72,3 @@ public class Drinks {
     private LocalDateTime updated_at;
     
 }
-insert into Drinks (title, description, category, price, size_of_drink, alcohol, is_available, created_at, updated_at) values ('Staropramen', null, 'Sör', 690, 5, 5,  true, CURRENT_TIMESTAMP(),  CURRENT_TIMESTAMP());

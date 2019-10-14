@@ -34,9 +34,9 @@ public class Orders {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-//    @Column
-//    @NotNull
-//    private Integer order_id;
+    @Column
+    @NotNull
+    private Integer order_id;
     
     @Column
     @NotNull

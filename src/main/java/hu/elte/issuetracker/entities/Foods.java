@@ -39,6 +39,10 @@ public class Foods {
     private String title;
 
     @Column
+    @NotNull
+    private String imgUrl;
+  
+    @Column
     private String description;
 
     @Column
