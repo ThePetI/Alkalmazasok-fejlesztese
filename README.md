@@ -1328,3 +1328,83 @@
   * **Code:** 401 UNAUTHORIZED <br />
     **Content:** `{ error : "You are unauthorized to make this request." }`
 	
+###
+
+* **URL**
+
+  /register
+
+* **Method:**
+
+  `POST`
+  
+*  **URL Params**
+
+	None
+
+* **Data Params**
+
+	{
+		"username": "Adam",
+		"password": "1234",
+		"enabled": "true",
+		"role": "ROLE_ADMIN"
+	}
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** 
+	{
+		"id": 1,
+		"username": "Adam",
+		"password": "$2a$10$1mQXCvI/D1Dwfa7s0xN6rOLA23pMJd9qwijJrZj7jsu9bPWsnjlTm",
+		"enabled": true,
+		"role": "ROLE_USER"
+	}
+ 
+* **Error Response:**
+
+  * **Code:** 404 NOT FOUND <br />
+    **Content:** `{ error : "Error" }`
+
+  OR
+
+  * **Code:** 401 UNAUTHORIZED <br />
+    **Content:** `{ error : "You are unauthorized to make this request." }`
+
+###
+
+* **URL**
+
+  /login
+
+* **Method:**
+
+  `POST`
+  
+*  **URL Params**
+
+	None
+
+* **Data Params**
+
+	{
+		"username": "Adam",
+		"password": "1234",
+	}
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** None
+ 
+* **Error Response:**
+
+  * **Code:** 404 NOT FOUND <br />
+    **Content:** `{ error : "Error" }`
+
+  OR
+
+  * **Code:** 401 UNAUTHORIZED <br />
+    **Content:** `{ error : "You are unauthorized to make this request." }`
