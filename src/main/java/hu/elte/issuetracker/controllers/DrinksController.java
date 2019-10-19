@@ -36,26 +36,26 @@ public class DrinksController {
     
     @GetMapping("/{id}")
     public ResponseEntity<Drinks> get(@PathVariable Integer id) {
-        Optional<Drinks> employees = drinksRepository.findById(id);
-        if (employees.isPresent()) {
-            return ResponseEntity.ok(employees.get());
+        Optional<Drinks> drinks = drinksRepository.findById(id);
+        if (drinks.isPresent()) {
+            return ResponseEntity.ok(drinks.get());
         } else {
             return ResponseEntity.notFound().build();
         }
     }
 
     @PostMapping("")
-    public ResponseEntity<Drinks> post(@RequestBody Drinks employees) {
-        Drinks savedDrinks = drinksRepository.save(employees);
+    public ResponseEntity<Drinks> post(@RequestBody Drinks drinks) {
+        Drinks savedDrinks = drinksRepository.save(drinks);
         return ResponseEntity.ok(savedDrinks);
     }
     
     @PutMapping("/{id}")
-    public ResponseEntity<Drinks> put(@RequestBody Drinks employees, @PathVariable Integer id) {
+    public ResponseEntity<Drinks> put(@RequestBody Drinks drinks, @PathVariable Integer id) {
         Optional<Drinks> oDrinks = drinksRepository.findById(id);
         if (oDrinks.isPresent()) {
-            employees.setId(id);
-            return ResponseEntity.ok(drinksRepository.save(employees));
+            drinks.setId(id);
+            return ResponseEntity.ok(drinksRepository.save(drinks));
         } else {
             return ResponseEntity.notFound().build();
         }

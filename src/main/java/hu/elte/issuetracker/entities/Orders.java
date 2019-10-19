@@ -5,12 +5,16 @@
  */
 package hu.elte.issuetracker.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.time.LocalDateTime;
+import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -36,15 +40,7 @@ public class Orders {
 
     @Column
     @NotNull
-    private Integer order_id;
-    
-    @Column
-    @NotNull
-    private String title;
-
-    @Column
-    @NotNull
-    private Integer price;
+    private Integer sumPrice;
 
     @Column(updatable = false)
     @CreationTimestamp
@@ -53,5 +49,15 @@ public class Orders {
     @Column
     @UpdateTimestamp
     private LocalDateTime updated_at;
+    
+    @ManyToMany(mappedBy = "courses")
+    @JsonIgnore
+    private List<Guests> guests;
+    
+    @OneToMany(mappedBy = "orders")
+    private List<Foods> foods;
+    
+    @OneToMany(mappedBy = "orders")
+    private List<Drinks> drinks;
     
 }
