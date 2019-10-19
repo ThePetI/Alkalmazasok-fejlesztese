@@ -19,6 +19,6 @@ insert into Employees (_name, pos) values ('Peti', 'mosogato');
 insert into Employees (_name, pos) values ('Elek Zoltan', 'fo-szakacs');
 insert into Employees (_name, pos) values ('Gordon Ramsey', 'kukta');
 
-insert into Orders (title, order_id, price, created_at, updated_at) values ('Staropramen', 1, 690, CURRENT_TIMESTAMP(),  CURRENT_TIMESTAMP());
-insert into Orders (title, order_id, price, created_at, updated_at) values ('Gulyásleves', 2, 1190, CURRENT_TIMESTAMP(),  CURRENT_TIMESTAMP());
-insert into Orders (title, order_id, price, created_at, updated_at) values ('Cordon Blue', 3, 2390, CURRENT_TIMESTAMP(),  CURRENT_TIMESTAMP());
+insert into Orders (sumPrice, created_at, updated_at) values (690, CURRENT_TIMESTAMP(),  CURRENT_TIMESTAMP());
+insert into Orders (sumPrice, created_at, updated_at) values (1190, CURRENT_TIMESTAMP(),  CURRENT_TIMESTAMP());
+insert into Orders (sumPrice, created_at, updated_at) values (2390, CURRENT_TIMESTAMP(),  CURRENT_TIMESTAMP());

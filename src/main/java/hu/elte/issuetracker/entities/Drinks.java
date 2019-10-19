@@ -5,12 +5,15 @@
  */
 package hu.elte.issuetracker.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.time.LocalDateTime;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -70,5 +73,10 @@ public class Drinks {
     @Column
     @UpdateTimestamp
     private LocalDateTime updated_at;
+    
+    @ManyToOne
+    @JoinColumn
+    
+    private Orders order;
     
 }
