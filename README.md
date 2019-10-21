@@ -1344,35 +1344,35 @@
     
 ### ------------------------------------------------------------------------------------
 
-* ***Fejlesztoi kornyezet: ***
-* ** Netbeans lokalis IDE
-* ** GitKraken verziokezelo alkalmazas
+* ***Fejlesztoi kornyezet:***
+* **Netbeans lokalis IDE**
+* **GitKraken verziokezelo alkalmazas**
 
 * ***Konyvtar struktura:***
-* **Controllers:
-    * **OrdersControllers.java
-    * **DrinksController.java
-    * **EmployeesController.java
-    * **FoodsController.java
-    * **GuestsController.java
-    * **UserController.java
-* **Entities:
-    * **Orders.java
-    * **Drinks.java
-    * **Employees.java
-    * **Foods.java
-    * **Guests.java
-    * **User.java
-* **Entities:
-    * **OrdersRepository.java
-    * **DrinksRepository.java
-    * **EmployeesRepository.java
-    * **FoodsRepository.java
-    * **GuestsRepository.java
-    * **UserRepository.java
-* **Security:
-    * **AuthenticatedUser.java
-    * **CustomBasicAuthenticationEntryPoint.java
-    * **MyUserDetailsService.java
-    * **WebSecurityConfig.java
+* **Controllers:**
+    * **OrdersControllers.java**
+    * **DrinksController.java**
+    * **EmployeesController.java**
+    * **FoodsController.java**
+    * **GuestsController.java**
+    * **UserController.java**
+* **Entities:**
+    * **Orders.java**
+    * **Drinks.java**
+    * **Employees.java**
+    * **Foods.java**
+    * **Guests.java**
+    * **User.java**
+* **Entities:**
+    * **OrdersRepository.java**
+    * **DrinksRepository.java**
+    * **EmployeesRepository.java**
+    * **FoodsRepository.java**
+    * **GuestsRepository.java**
+    * **UserRepository.java**
+* **Security:**
+    * **AuthenticatedUser.java**
+    * **CustomBasicAuthenticationEntryPoint.java**
+    * **MyUserDetailsService.java**
+    * **WebSecurityConfig.java**
 	
