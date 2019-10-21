@@ -1,3 +1,4 @@
+# 1. MILESTONE
 ****1. Projektötlet:****
 
 Éttermi rendelő felület elkészítése
@@ -84,10 +85,13 @@
 -   Vendég: Ételeket, italokat tud keresni, rendelni, melyhez tud megjegyzést
     fűzni vagy azt módosítani. Kérheti a számlát és jelezheti ha egyéb igénye
     volna.
-	
-**RestApi dokumentáció:**	
+    
+# 2. MILESTONE
+****2. RestAPI dokumentáció:****
 
-
+## VEGPONTOK LEIRASA:
+### ------------------------------------------------------------------------------------
+	(Mivel ugy gondoltuk, egy RestAPI eseteben ez a legfontosabb a dokumentacio teren, ezert ezt fejtettuk ki a legreszletesebben.)
 * **URL**
 
   /drinks
@@ -185,7 +189,7 @@
   * **Code:** 401 UNAUTHORIZED <br />
     **Content:** `{ error : "You are unauthorized to make this request." }`
 	
-###
+### ------------------------------------------------------------------------------------
 
 * **URL**
 
@@ -231,7 +235,7 @@
   * **Code:** 401 UNAUTHORIZED <br />
     **Content:** `{ error : "You are unauthorized to make this request." }`
 
-###
+### ------------------------------------------------------------------------------------
 
 * **URL**
 
@@ -288,7 +292,9 @@
   OR
 
   * **Code:** 401 UNAUTHORIZED <br />
-    **Content:** `{ error : "You are unauthorized to make this request." }`###
+    **Content:** `{ error : "You are unauthorized to make this request." }`
+    
+### ------------------------------------------------------------------------------------
 
 * **URL**
 
@@ -347,7 +353,7 @@
   * **Code:** 401 UNAUTHORIZED <br />
     **Content:** `{ error : "You are unauthorized to make this request." }`###
 	
-###
+### ------------------------------------------------------------------------------------
 
 * **URL**
 
@@ -380,7 +386,7 @@
   * **Code:** 401 UNAUTHORIZED <br />
     **Content:** `{ error : "You are unauthorized to make this request." }`
 	
-* **URL**
+### ------------------------------------------------------------------------------------
 
 * **URL**
 
@@ -434,7 +440,7 @@
   * **Code:** 401 UNAUTHORIZED <br />
     **Content:** `{ error : "You are unauthorized to make this request." }`
 	
-###
+### ------------------------------------------------------------------------------------
 
 * **URL**
 
@@ -475,7 +481,9 @@
   OR
 
   * **Code:** 401 UNAUTHORIZED <br />
-    **Content:** `{ error : "You are unauthorized to make this request." }`###
+    **Content:** `{ error : "You are unauthorized to make this request." }`
+    
+### ------------------------------------------------------------------------------------
 
 * **URL**
 
@@ -518,7 +526,7 @@
   * **Code:** 401 UNAUTHORIZED <br />
     **Content:** `{ error : "You are unauthorized to make this request." }`
 
-###
+### ------------------------------------------------------------------------------------
 
 * **URL**
 
@@ -561,7 +569,7 @@
   * **Code:** 401 UNAUTHORIZED <br />
     **Content:** `{ error : "You are unauthorized to make this request." }`
 	
-###
+### ------------------------------------------------------------------------------------
 
 * **URL**
 
@@ -599,7 +607,7 @@
   * **Code:** 401 UNAUTHORIZED <br />
     **Content:** `{ error : "You are unauthorized to make this request." }`
 
-###
+### ------------------------------------------------------------------------------------
 
 * **URL**
 
@@ -631,7 +639,9 @@
 
   * **Code:** 401 UNAUTHORIZED <br />
     **Content:** `{ error : "You are unauthorized to make this request." }`
-	
+    
+### ------------------------------------------------------------------------------------
+
 * **URL**
 
   /foods
@@ -719,7 +729,7 @@
   * **Code:** 401 UNAUTHORIZED <br />
     **Content:** `{ error : "You are unauthorized to make this request." }`
 	
-###
+### ------------------------------------------------------------------------------------
 
 * **URL**
 
@@ -763,7 +773,7 @@
   * **Code:** 401 UNAUTHORIZED <br />
     **Content:** `{ error : "You are unauthorized to make this request." }`
 
-###
+### ------------------------------------------------------------------------------------
 
 * **URL**
 
@@ -817,6 +827,8 @@
 
   * **Code:** 401 UNAUTHORIZED <br />
     **Content:** `{ error : "You are unauthorized to make this request." }`###
+    
+### ------------------------------------------------------------------------------------
 
 * **URL**
 
@@ -871,7 +883,7 @@
   * **Code:** 401 UNAUTHORIZED <br />
     **Content:** `{ error : "You are unauthorized to make this request." }`###
 	
-###
+### ------------------------------------------------------------------------------------
 
 * **URL**
 
@@ -903,7 +915,9 @@
 
   * **Code:** 401 UNAUTHORIZED <br />
     **Content:** `{ error : "You are unauthorized to make this request." }`
-	
+    
+### ------------------------------------------------------------------------------------	
+
 * **URL**
 
   /guests
@@ -951,7 +965,7 @@
   * **Code:** 401 UNAUTHORIZED <br />
     **Content:** `{ error : "You are unauthorized to make this request." }`
 	
-###
+### ------------------------------------------------------------------------------------
 
 * **URL**
 
@@ -989,7 +1003,7 @@
   * **Code:** 401 UNAUTHORIZED <br />
     **Content:** `{ error : "You are unauthorized to make this request." }`
 
-###
+### ------------------------------------------------------------------------------------
 
 * **URL**
 
@@ -1070,7 +1084,7 @@
   * **Code:** 401 UNAUTHORIZED <br />
     **Content:** `{ error : "You are unauthorized to make this request." }`###
 	
-###
+### ------------------------------------------------------------------------------------
 
 * **URL**
 
@@ -1102,10 +1116,10 @@
 
   * **Code:** 401 UNAUTHORIZED <br />
     **Content:** `{ error : "You are unauthorized to make this request." }`
-	
-* **URL**
 
-###
+### ------------------------------------------------------------------------------------
+
+* **URL**
 
   /orders
 
@@ -1161,7 +1175,7 @@
   * **Code:** 401 UNAUTHORIZED <br />
     **Content:** `{ error : "You are unauthorized to make this request." }`
 	
-###
+### ------------------------------------------------------------------------------------
 
 * **URL**
 
@@ -1201,7 +1215,7 @@
   * **Code:** 401 UNAUTHORIZED <br />
     **Content:** `{ error : "You are unauthorized to make this request." }`
 
-###
+### ------------------------------------------------------------------------------------
 
 * **URL**
 
@@ -1295,7 +1309,7 @@
   * **Code:** 401 UNAUTHORIZED <br />
     **Content:** `{ error : "You are unauthorized to make this request." }`###
 	
-###
+### ------------------------------------------------------------------------------------
 
 * **URL**
 
@@ -1327,4 +1341,38 @@
 
   * **Code:** 401 UNAUTHORIZED <br />
     **Content:** `{ error : "You are unauthorized to make this request." }`
+    
+### ------------------------------------------------------------------------------------
+
+* ***Fejlesztoi kornyezet: ***
+* ** Netbeans lokalis IDE
+* ** GitKraken verziokezelo alkalmazas
+
+* ***Konyvtar struktura:***
+* **Controllers:
+    * **OrdersControllers.java
+    * **DrinksController.java
+    * **EmployeesController.java
+    * **FoodsController.java
+    * **GuestsController.java
+    * **UserController.java
+* **Entities:
+    * **Orders.java
+    * **Drinks.java
+    * **Employees.java
+    * **Foods.java
+    * **Guests.java
+    * **User.java
+* **Entities:
+    * **OrdersRepository.java
+    * **DrinksRepository.java
+    * **EmployeesRepository.java
+    * **FoodsRepository.java
+    * **GuestsRepository.java
+    * **UserRepository.java
+* **Security:
+    * **AuthenticatedUser.java
+    * **CustomBasicAuthenticationEntryPoint.java
+    * **MyUserDetailsService.java
+    * **WebSecurityConfig.java
 	
