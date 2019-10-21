@@ -1,4 +1,4 @@
-**1. Projektötlet:**
+#1. Projektötlet:
 
 Éttermi rendelő felület elkészítése
 
