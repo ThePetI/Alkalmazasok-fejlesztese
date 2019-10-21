@@ -14,6 +14,6 @@
 // * @author Solti
 // */
 //@Repository
-//public interface GuestsRepository extends CrudRepository<Guests, Integer> {
+//public interface WorkersRepository extends CrudRepository<Workers, Integer> {
 //
 //}
