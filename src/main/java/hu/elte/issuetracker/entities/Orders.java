@@ -50,14 +50,15 @@ public class Orders {
     @UpdateTimestamp
     private LocalDateTime updated_at;
     
-    @ManyToMany(mappedBy = "courses")
+    
+    @ManyToMany(mappedBy = "order")
     @JsonIgnore
     private List<Guests> guests;
     
-    @OneToMany(mappedBy = "orders")
+    @OneToMany(mappedBy = "order")
     private List<Foods> foods;
     
-    @OneToMany(mappedBy = "orders")
+    @OneToMany(mappedBy = "order")
     private List<Drinks> drinks;
     
 }
