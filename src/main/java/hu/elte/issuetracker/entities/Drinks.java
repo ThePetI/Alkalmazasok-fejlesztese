@@ -11,6 +11,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -29,7 +31,6 @@ import org.hibernate.annotations.UpdateTimestamp;
 @AllArgsConstructor
 @EqualsAndHashCode
 public class Drinks {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -37,6 +38,10 @@ public class Drinks {
     @Column
     @NotNull
     private String title;
+    
+    @Column
+    @NotNull
+    private String imageUrl;
 
     @Column
     private String description;
@@ -54,12 +59,11 @@ public class Drinks {
     private Integer size;
         
     @Column
-    @NotNull
     private Integer alcohol;
         
     @Column
     @NotNull
-    private boolean isAvailable;
+    private boolean is_available;
 
     @Column(updatable = false)
     @CreationTimestamp
@@ -68,5 +72,9 @@ public class Drinks {
     @Column
     @UpdateTimestamp
     private LocalDateTime updated_at;
+    
+    @ManyToOne
+    @JoinColumn
+    private Orders order;
     
 }
