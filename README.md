@@ -94,1027 +94,773 @@
 	(Mivel ugy gondoltuk, egy RestAPI eseteben ez a legfontosabb a dokumentacio teren, ezert ezt fejtettuk ki a legreszletesebben.)
 * **URL**
 
-  /drinks
+/drinks
 
-* **Method:**
+-   **Method:**
 
-  `GET`
-  
-*  **URL Params**
+`GET`
 
-	None
+-   **URL Params**
 
-* **Data Params**
+-   None
 
-	None
+-   **Data Params**
 
-* **Success Response:**
+-   None
 
-  * **Code:** 200 <br />
-    **Content:** `[
-					  {
-						"id": 2,
-						"title": "Bartos ezerjĂł",
-						"imageUrl": "",
-						"description": "A hĂ­res magyar youtuber, Bartos Cs. IstvĂˇn utĂˇn elnevezett 100% gyĂĽmĂ¶lcstartalmĂş, biĂł Ă©s vegĂˇn termelĹ‘i bor.",
-						"category": "Bor",
-						"price": 2990,
-						"size_of_drink": 100,
-						"alcohol": 10,
-						"created_at": "2019-10-19T13:34:33.946",
-						"updated_at": "2019-10-19T13:34:33.946",
-						"_available": true
-					  },
-					  {
-						"id": 3,
-						"title": "Cola",
-						"imageUrl": "",
-						"description": null,
-						"category": "ĂśdĂ­tĹ‘",
-						"price": 390,
-						"size_of_drink": 2,
-						"alcohol": 25,
-						"created_at": "2019-10-19T13:34:33.946",
-						"updated_at": "2019-10-19T13:34:33.946",
-						"_available": true
-					  },
-					  {
-						"id": 4,
-						"title": "Whisky",
-						"imageUrl": "",
-						"description": "Jim Beam/Ballentines",
-						"category": "TĂ¶mĂ©ny",
-						"price": 890,
-						"size_of_drink": 1,
-						"alcohol": 40,
-						"created_at": "2019-10-19T13:34:33.946",
-						"updated_at": "2019-10-19T13:34:33.946",
-						"_available": true
-					  },
-					  {
-						"id": 5,
-						"title": "LafiKobra",
-						"imageUrl": "",
-						"description": "A bajnokok napindĂ­tĂłja.",
-						"category": "Kevert",
-						"price": 590,
-						"size_of_drink": 5,
-						"alcohol": 8,
-						"created_at": "2019-10-19T13:34:33.946",
-						"updated_at": "2019-10-19T13:34:33.946",
-						"_available": true
-					  },
-					  {
-						"id": 6,
-						"title": "Soproni",
-						"imageUrl": "",
-						"description": null,
-						"category": "Sor",
-						"price": 590,
-						"size_of_drink": 5,
-						"alcohol": 5,
-						"created_at": "2019-10-19T13:46:30.461",
-						"updated_at": "2019-10-19T13:46:30.462",
-						"_available": true
-					  }
-					]
- 
-* **Error Response:**
+-   **Success Response:**
 
-  * **Code:** 404 NOT FOUND <br />
+-   **Code:** 200  
+    **Content:** \`[ { "id": 2, "title": "Bartos ezerjĂł", "imageUrl": "",
+    "description": "A hĂ­res magyar youtuber, Bartos Cs. IstvĂˇn utĂˇn
+    elnevezett 100% gyĂĽmĂ¶lcstartalmĂş, biĂł Ă©s vegĂˇn termelĹ‘i bor.",
+    "category": "Bor", "price": 2990, "size_of_drink": 100, "alcohol": 10,
+    "created_at": "2019-10-19T13:34:33.946", "updated_at":
+    "2019-10-19T13:34:33.946", "_available": true }, { "id": 3, "title": "Cola",
+    "imageUrl": "", "description": null, "category": "ĂśdĂ­tĹ‘", "price": 390,
+    "size_of_drink": 2, "alcohol": 25, "created_at": "2019-10-19T13:34:33.946",
+    "updated_at": "2019-10-19T13:34:33.946", "_available": true }, { "id": 4,
+    "title": "Whisky", "imageUrl": "", "description": "Jim Beam/Ballentines",
+    "category": "TĂ¶mĂ©ny", "price": 890, "size_of_drink": 1, "alcohol": 40,
+    "created_at": "2019-10-19T13:34:33.946", "updated_at":
+    "2019-10-19T13:34:33.946", "_available": true }, { "id": 5, "title":
+    "LafiKobra", "imageUrl": "", "description": "A bajnokok napindĂ­tĂłja.",
+    "category": "Kevert", "price": 590, "size_of_drink": 5, "alcohol": 8,
+    "created_at": "2019-10-19T13:34:33.946", "updated_at":
+    "2019-10-19T13:34:33.946", "_available": true }, { "id": 6, "title":
+    "Soproni", "imageUrl": "", "description": null, "category": "Sor", "price":
+    590, "size_of_drink": 5, "alcohol": 5, "created_at":
+    "2019-10-19T13:46:30.461", "updated_at": "2019-10-19T13:46:30.462",
+    "_available": true } ]
+
+-   **Error Response:**
+
+-   **Code:** 404 NOT FOUND  
     **Content:** `{ error : "Error" }`
 
-  OR
+OR
 
-  * **Code:** 401 UNAUTHORIZED <br />
+-   **Code:** 401 UNAUTHORIZED  
     **Content:** `{ error : "You are unauthorized to make this request." }`
 	
 ### ------------------------------------------------------------------------------------
 
-* **URL**
+-   **URL**
 
-  /drinks
+/drinks
 
-* **Method:**
+-   **Method:**
 
-  `GET`
-  
-*  **URL Params**
+`GET`
 
-	/id
+-   **URL Params**
 
-* **Data Params**
+-   /id
 
-	None
+-   **Data Params**
 
-* **Success Response:**
+-   None
 
-  * **Code:** 200 <br />
-    **Content:** 
-				  {
-					"id": 5,
-					"title": "LafiKobra",
-					"imageUrl": "",
-					"description": "A bajnokok napindĂ­tĂłja.",
-					"category": "Kevert",
-					"price": 590,
-					"size_of_drink": 5,
-					"alcohol": 8,
-					"created_at": "2019-10-19T13:34:33.946",
-					"updated_at": "2019-10-19T13:34:33.946",
-					"_available": true
-				  },
- 
-* **Error Response:**
+-   **Success Response:**
 
-  * **Code:** 404 NOT FOUND <br />
+-   **Code:** 200  
+    **Content:** { "id": 5, "title": "LafiKobra", "imageUrl": "", "description":
+    "A bajnokok napindĂ­tĂłja.", "category": "Kevert", "price": 590,
+    "size_of_drink": 5, "alcohol": 8, "created_at": "2019-10-19T13:34:33.946",
+    "updated_at": "2019-10-19T13:34:33.946", "_available": true },
+
+-   **Error Response:**
+
+-   **Code:** 404 NOT FOUND  
     **Content:** `{ error : "Error" }`
 
-  OR
+OR
 
-  * **Code:** 401 UNAUTHORIZED <br />
+-   **Code:** 401 UNAUTHORIZED  
     **Content:** `{ error : "You are unauthorized to make this request." }`
 
 ### ------------------------------------------------------------------------------------
 
-* **URL**
+/drinks
 
-  /drinks
+-   **Method:**
 
-* **Method:**
+`POST`
 
-  `POST`
-  
-*  **URL Params**
+-   **URL Params**
 
-	None
+-   None
 
-* **Data Params**
+-   **Data Params**
 
-	
-	body: 
-	  {
-		"title": "Soproni",
-		"imageUrl": "",
-		"description": null,
-		"category": "Sor",
-		"price": 590,
-		"size_of_drink": 5,
-		"alcohol": 5,
-		"created_at": "2019-10-19T13:46:30.461",
-		"updated_at": "2019-10-19T13:46:30.462",
-		"_available": true
-	  }
+-   body: { "title": "Soproni", "imageUrl": "", "description": null, "category":
+    "Sor", "price": 590, "size_of_drink": 5, "alcohol": 5, "created_at":
+    "2019-10-19T13:46:30.461", "updated_at": "2019-10-19T13:46:30.462",
+    "_available": true }
 
-* **Success Response:**
+-   **Success Response:**
 
-  * **Code:** 200 <br />
-    **Content:** 
-			  {
-				"id": 6,
-				"title": "Soproni",
-				"imageUrl": "",
-				"description": null,
-				"category": "Sor",
-				"price": 590,
-				"size_of_drink": 5,
-				"alcohol": 5,
-				"created_at": "2019-10-19T13:46:30.461",
-				"updated_at": "2019-10-19T13:46:30.462",
-				"_available": true
-			  }
-		 
-* **Error Response:**
+-   **Code:** 200  
+    **Content:** { "id": 6, "title": "Soproni", "imageUrl": "", "description":
+    null, "category": "Sor", "price": 590, "size_of_drink": 5, "alcohol": 5,
+    "created_at": "2019-10-19T13:46:30.461", "updated_at":
+    "2019-10-19T13:46:30.462", "_available": true }
 
-  * **Code:** 404 NOT FOUND <br />
+-   **Error Response:**
+
+-   **Code:** 404 NOT FOUND  
     **Content:** `{ error : "Error" }`
 
-  OR
+OR
 
   * **Code:** 401 UNAUTHORIZED <br />
     **Content:** `{ error : "You are unauthorized to make this request." }`
     
 ### ------------------------------------------------------------------------------------
 
-* **URL**
+-   **URL**
 
-  /drinks
+/drinks
 
-* **Method:**
+-   **Method:**
 
-  `PUT`
-  
-*  **URL Params**
+`PUT`
 
-	/id
+-   **URL Params**
 
-* **Data Params**
+-   /id
 
-	
-	body: 
-	  {
-		"title": "Soproni",
-		"imageUrl": "",
-		"description": null,
-		"category": "Sor",
-		"price": 590,
-		"size_of_drink": 5,
-		"alcohol": 5,
-		"created_at": "2019-10-19T13:46:30.461",
-		"updated_at": "2019-10-19T13:46:30.462",
-		"_available": true
-	  }
+-   **Data Params**
 
-* **Success Response:**
+-   body: { "title": "Soproni", "imageUrl": "", "description": null, "category":
+    "Sor", "price": 590, "size_of_drink": 5, "alcohol": 5, "created_at":
+    "2019-10-19T13:46:30.461", "updated_at": "2019-10-19T13:46:30.462",
+    "_available": true }
 
-  * **Code:** 200 <br />
-    **Content:** 
-			  {
-				"id": 6,
-				"title": "Soproni",
-				"imageUrl": "",
-				"description": null,
-				"category": "Sor",
-				"price": 590,
-				"size_of_drink": 5,
-				"alcohol": 5,
-				"created_at": "2019-10-19T13:46:30.461",
-				"updated_at": "2019-10-19T13:46:30.462",
-				"_available": true
-			  }
-		 
-* **Error Response:**
+-   **Success Response:**
 
-  * **Code:** 404 NOT FOUND <br />
+-   **Code:** 200  
+    **Content:** { "id": 6, "title": "Soproni", "imageUrl": "", "description":
+    null, "category": "Sor", "price": 590, "size_of_drink": 5, "alcohol": 5,
+    "created_at": "2019-10-19T13:46:30.461", "updated_at":
+    "2019-10-19T13:46:30.462", "_available": true }
+
+-   **Error Response:**
+
+-   **Code:** 404 NOT FOUND  
     **Content:** `{ error : "Error" }`
 
-  OR
+OR
 
   * **Code:** 401 UNAUTHORIZED <br />
     **Content:** `{ error : "You are unauthorized to make this request." }`###
 	
 ### ------------------------------------------------------------------------------------
 
-* **URL**
+-   **URL**
 
-  /drinks
+/drinks
 
-* **Method:**
+-   **Method:**
 
-  `DELETE`
-  
-*  **URL Params**
+`DELETE`
 
-	/id
+-   **URL Params**
 
-* **Data Params**
+-   /id
 
-	None
+-   **Data Params**
 
-* **Success Response:**
+-   None
 
-  * **Code:** 200 <br />
+-   **Success Response:**
+
+-   **Code:** 200  
     **Content:** None
- 
-* **Error Response:**
 
-  * **Code:** 404 NOT FOUND <br />
+-   **Error Response:**
+
+-   **Code:** 404 NOT FOUND  
     **Content:** `{ error : "Error" }`
 
-  OR
+OR
 
-  * **Code:** 401 UNAUTHORIZED <br />
+-   **Code:** 401 UNAUTHORIZED  
     **Content:** `{ error : "You are unauthorized to make this request." }`
 	
 ### ------------------------------------------------------------------------------------
 
-* **URL**
+-   **URL**
 
-  /employees
+-   **URL**
 
-* **Method:**
+/employees
 
-  `GET`
-  
-*  **URL Params**
+-   **Method:**
 
-	None
+`GET`
 
-* **Data Params**
+-   **URL Params**
 
-	None
+-   None
 
-* **Success Response:**
+-   **Data Params**
 
-  * **Code:** 200 <br />
-    **Content:** [
-					{
-						"id": 1,
-						"_name": "Krisztian",
-						"pos": "Vezerigazgato"
-					},
-					{
-						"id": 2,
-						"_name": "Peti",
-						"pos": "mosogato"
-					},
-					{
-						"id": 3,
-						"_name": "Elek Zoltan",
-						"pos": "fo-szakacs"
-					},
-					{
-						"id": 4,
-						"_name": "Gordon Ramsey",
-						"pos": "kukta"
-					}
-				]`
- 
-* **Error Response:**
+-   None
 
-  * **Code:** 404 NOT FOUND <br />
+-   **Success Response:**
+
+-   **Code:** 200  
+    **Content:** [ { "id": 1, "_name": "Krisztian", "pos": "Vezerigazgato" }, {
+    "id": 2, "_name": "Peti", "pos": "mosogato" }, { "id": 3, "_name": "Elek
+    Zoltan", "pos": "fo-szakacs" }, { "id": 4, "_name": "Gordon Ramsey", "pos":
+    "kukta" } ]\`
+
+-   **Error Response:**
+
+-   **Code:** 404 NOT FOUND  
     **Content:** `{ error : "Error" }`
 
-  OR
+OR
 
-  * **Code:** 401 UNAUTHORIZED <br />
+-   **Code:** 401 UNAUTHORIZED  
     **Content:** `{ error : "You are unauthorized to make this request." }`
 	
 ### ------------------------------------------------------------------------------------
 
-* **URL**
+-   **URL**
 
-  /employees
+/employees
 
-* **Method:**
+-   **Method:**
 
-  `POST`
-  
-*  **URL Params**
+`POST`
 
-	None
+-   **URL Params**
 
-* **Data Params**
+-   None
 
-	
-	body: 
-	{
-		"_name": "Jani",
-		"pos": "takarito"
-	}
+-   **Data Params**
 
-* **Success Response:**
+-   body: { "_name": "Jani", "pos": "takarito" }
 
-  * **Code:** 200 <br />
-    **Content:** 
-				{
-					"id": 5,
-					"_name": "Jani",
-					"pos": "takarito"
-				}
- 
-* **Error Response:**
+-   **Success Response:**
 
-  * **Code:** 404 NOT FOUND <br />
+-   **Code:** 200  
+    **Content:** { "id": 5, "_name": "Jani", "pos": "takarito" }
+
+-   **Error Response:**
+
+-   **Code:** 404 NOT FOUND  
     **Content:** `{ error : "Error" }`
 
-  OR
+OR
 
   * **Code:** 401 UNAUTHORIZED <br />
     **Content:** `{ error : "You are unauthorized to make this request." }`
     
 ### ------------------------------------------------------------------------------------
 
-* **URL**
+-   **URL**
 
-  /employees
+/employees
 
-* **Method:**
+-   **Method:**
 
-  `POST`
-  
-*  **URL Params**
+`POST`
 
-	None
+-   **URL Params**
 
-* **Data Params**
+-   None
 
-	
-	body: 
-	{
-		"_name": "Jani",
-		"pos": "takarito"
-	}
+-   **Data Params**
 
-* **Success Response:**
+-   body: { "_name": "Jani", "pos": "takarito" }
 
-  * **Code:** 200 <br />
-    **Content:** 
-				{
-					"id": 5,
-					"_name": "Jani",
-					"pos": "takarito"
-				}
- 
-* **Error Response:**
+-   **Success Response:**
 
-  * **Code:** 404 NOT FOUND <br />
+-   **Code:** 200  
+    **Content:** { "id": 5, "_name": "Jani", "pos": "takarito" }
+
+-   **Error Response:**
+
+-   **Code:** 404 NOT FOUND  
     **Content:** `{ error : "Error" }`
 
-  OR
+OR
 
-  * **Code:** 401 UNAUTHORIZED <br />
+-   **Code:** 401 UNAUTHORIZED  
     **Content:** `{ error : "You are unauthorized to make this request." }`
 
 ### ------------------------------------------------------------------------------------
 
-* **URL**
+/employees
 
-  /employees
+-   **Method:**
 
-* **Method:**
+`PUT`
 
-  `PUT`
-  
-*  **URL Params**
+-   **URL Params**
 
-	/id
+-   /id
 
-* **Data Params**
+-   **Data Params**
 
-	
-	body: 
-	{
-		"_name": "Jani",
-		"pos": "felszolgalo"
-	}
+-   body: { "_name": "Jani", "pos": "felszolgalo" }
 
-* **Success Response:**
+-   **Success Response:**
 
-  * **Code:** 200 <br />
-    **Content:** 
-				{
-					"id": 5,
-					"_name": "Jani",
-					"pos": "felszolgalo"
-				}
- 
-* **Error Response:**
+-   **Code:** 200  
+    **Content:** { "id": 5, "_name": "Jani", "pos": "felszolgalo" }
 
-  * **Code:** 404 NOT FOUND <br />
+-   **Error Response:**
+
+-   **Code:** 404 NOT FOUND  
     **Content:** `{ error : "Error" }`
 
-  OR
+OR
 
-  * **Code:** 401 UNAUTHORIZED <br />
+-   **Code:** 401 UNAUTHORIZED  
     **Content:** `{ error : "You are unauthorized to make this request." }`
 	
 ### ------------------------------------------------------------------------------------
 
-* **URL**
+-   **URL**
 
-  /employees
+/employees
 
-* **Method:**
+-   **Method:**
 
-  `GET`
-  
-*  **URL Params**
+`GET`
 
-	/id
+-   **URL Params**
 
-* **Data Params**
+-   /id
 
-	None
+-   **Data Params**
 
-* **Success Response:**
+-   None
 
-  * **Code:** 200 <br />
-    **Content:** 
-				{
-					"id": 5,
-					"_name": "Jani",
-					"pos": "felszolgalo"
-				}
- 
-* **Error Response:**
+-   **Success Response:**
 
-  * **Code:** 404 NOT FOUND <br />
+-   **Code:** 200  
+    **Content:** { "id": 5, "_name": "Jani", "pos": "felszolgalo" }
+
+-   **Error Response:**
+
+-   **Code:** 404 NOT FOUND  
     **Content:** `{ error : "Error" }`
 
-  OR
+OR
 
-  * **Code:** 401 UNAUTHORIZED <br />
+-   **Code:** 401 UNAUTHORIZED  
     **Content:** `{ error : "You are unauthorized to make this request." }`
 
 ### ------------------------------------------------------------------------------------
 
-* **URL**
+/employees
 
-  /employees
+-   **Method:**
 
-* **Method:**
+`DELETE`
 
-  `DELETE`
-  
-*  **URL Params**
+-   **URL Params**
 
-	/id
+-   /id
 
-* **Data Params**
+-   **Data Params**
 
-	None
+-   None
 
-* **Success Response:**
+-   **Success Response:**
 
-  * **Code:** 200 <br />
+-   **Code:** 200  
     **Content:** None
- 
-* **Error Response:**
 
-  * **Code:** 404 NOT FOUND <br />
+-   **Error Response:**
+
+-   **Code:** 404 NOT FOUND  
     **Content:** `{ error : "Error" }`
 
-  OR
+OR
 
-  * **Code:** 401 UNAUTHORIZED <br />
+-   **Code:** 401 UNAUTHORIZED  
     **Content:** `{ error : "You are unauthorized to make this request." }`
     
 ### ------------------------------------------------------------------------------------
 
 * **URL**
 
-  /foods
+-   **URL**
 
-* **Method:**
+/foods
 
-  `GET`
-  
-*  **URL Params**
+-   **Method:**
 
-	None
+`GET`
 
-* **Data Params**
+-   **URL Params**
 
-	None
+-   None
 
-* **Success Response:**
+-   **Data Params**
 
-  * **Code:** 200 <br />
-    **Content:** [
-					  {
-						"id": 1,
-						"title": "GulyĂˇsleves",
-						"imgUrl": "saddsaasd",
-						"description": "Klasszikus magyar gulyĂˇsleves, sertĂ©skarajbĂłl, sĂˇrgaburgonyĂˇbĂłl.",
-						"category": "Leves",
-						"price": 1190,
-						"is_available": true,
-						"created_at": "2019-10-19T13:34:33.946",
-						"updated_at": "2019-10-19T13:34:33.946"
-					  },
-					  {
-						"id": 2,
-						"title": "Cordon blue hasĂˇbburgyonĂˇval",
-						"imgUrl": "saddsaasd",
-						"description": "RĂˇntott pulykamell sajttal Ă©s sonkĂˇval tĂ¶ltve, egyedi fĹ±szerezĂ©ssel.",
-						"category": "SzĂˇrnyas",
-						"price": 2390,
-						"is_available": false,
-						"created_at": "2019-10-19T13:34:33.946",
-						"updated_at": "2019-10-19T13:34:33.946"
-					  },
-					  {
-						"id": 3,
-						"title": "Kereszti KrisztiĂˇn KalĂˇcsa",
-						"imgUrl": "saddsaasd",
-						"description": "HĂ­res informatikai kĂĽlĂ¶nlegessĂ©g, melyet a kedvenc fejlesztĹ‘i kĂ¶rnyezetĂĽnk - a NetBeans - hasznĂˇlata kĂ¶zben ajĂˇnlunk fogyasztani.",
-						"category": "Desszert",
-						"price": 790,
-						"is_available": true,
-						"created_at": "2019-10-19T13:34:33.946",
-						"updated_at": "2019-10-19T13:34:33.946"
-					  },
-					  {
-						"id": 4,
-						"title": "TĂ¶mlĹ‘ssajtos rĂˇntot pĂˇrizsi",
-						"imgUrl": "saddsaasd",
-						"description": "A magyar youtube legnĂ©pszerĹ±bb Ă©tele, melyet minden igaz magyarnak kikell prĂłbĂˇlnia legalĂˇbb egyszer.",
-						"category": "990",
-						"price": 100,
-						"is_available": true,
-						"created_at": "2019-10-19T13:34:33.946",
-						"updated_at": "2019-10-19T13:34:33.946"
-					  },
-					  {
-						"id": 5,
-						"title": "DĂ©li bĂĽfĂ© szendvics",
-						"imgUrl": "saddsaasd",
-						"description": "Klasszikus mirelithĂşsos csoda, melyet 3 napja kĂ©szĂ­tettĂĽnk vacsorĂˇra, de rĂˇnk maradt.",
-						"category": "9990",
-						"price": 100,
-						"is_available": true,
-						"created_at": "2019-10-19T13:34:33.946",
-						"updated_at": "2019-10-19T13:34:33.946"
-					  }
-					]
- 
-* **Error Response:**
+-   None
 
-  * **Code:** 404 NOT FOUND <br />
+-   **Success Response:**
+
+-   **Code:** 200  
+    **Content:** [ { "id": 1, "title": "GulyĂˇsleves", "imgUrl": "saddsaasd",
+    "description": "Klasszikus magyar gulyĂˇsleves, sertĂ©skarajbĂłl,
+    sĂˇrgaburgonyĂˇbĂłl.", "category": "Leves", "price": 1190, "is_available":
+    true, "created_at": "2019-10-19T13:34:33.946", "updated_at":
+    "2019-10-19T13:34:33.946" }, { "id": 2, "title": "Cordon blue
+    hasĂˇbburgyonĂˇval", "imgUrl": "saddsaasd", "description": "RĂˇntott
+    pulykamell sajttal Ă©s sonkĂˇval tĂ¶ltve, egyedi fĹ±szerezĂ©ssel.",
+    "category": "SzĂˇrnyas", "price": 2390, "is_available": false, "created_at":
+    "2019-10-19T13:34:33.946", "updated_at": "2019-10-19T13:34:33.946" }, {
+    "id": 3, "title": "Kereszti KrisztiĂˇn KalĂˇcsa", "imgUrl": "saddsaasd",
+    "description": "HĂ­res informatikai kĂĽlĂ¶nlegessĂ©g, melyet a kedvenc
+    fejlesztĹ‘i kĂ¶rnyezetĂĽnk - a NetBeans - hasznĂˇlata kĂ¶zben ajĂˇnlunk
+    fogyasztani.", "category": "Desszert", "price": 790, "is_available": true,
+    "created_at": "2019-10-19T13:34:33.946", "updated_at":
+    "2019-10-19T13:34:33.946" }, { "id": 4, "title": "TĂ¶mlĹ‘ssajtos rĂˇntot
+    pĂˇrizsi", "imgUrl": "saddsaasd", "description": "A magyar youtube
+    legnĂ©pszerĹ±bb Ă©tele, melyet minden igaz magyarnak kikell prĂłbĂˇlnia
+    legalĂˇbb egyszer.", "category": "990", "price": 100, "is_available": true,
+    "created_at": "2019-10-19T13:34:33.946", "updated_at":
+    "2019-10-19T13:34:33.946" }, { "id": 5, "title": "DĂ©li bĂĽfĂ© szendvics",
+    "imgUrl": "saddsaasd", "description": "Klasszikus mirelithĂşsos csoda,
+    melyet 3 napja kĂ©szĂ­tettĂĽnk vacsorĂˇra, de rĂˇnk maradt.", "category":
+    "9990", "price": 100, "is_available": true, "created_at":
+    "2019-10-19T13:34:33.946", "updated_at": "2019-10-19T13:34:33.946" } ]
+
+-   **Error Response:**
+
+-   **Code:** 404 NOT FOUND  
     **Content:** `{ error : "Error" }`
 
-  OR
+OR
 
-  * **Code:** 401 UNAUTHORIZED <br />
+-   **Code:** 401 UNAUTHORIZED  
     **Content:** `{ error : "You are unauthorized to make this request." }`
 	
 ### ------------------------------------------------------------------------------------
 
-* **URL**
+-   **URL**
 
-  /foods
+/foods
 
-* **Method:**
+-   **Method:**
 
-  `GET`
-  
-*  **URL Params**
+`GET`
 
-	/id
+-   **URL Params**
 
-* **Data Params**
+-   /id
 
-	None
+-   **Data Params**
 
-* **Success Response:**
+-   None
 
-  * **Code:** 200 <br />
-    **Content:** 
-				  {
-					"id": 5,
-					"title": "DĂ©li bĂĽfĂ© szendvics",
-					"imgUrl": "saddsaasd",
-					"description": "Klasszikus mirelithĂşsos csoda, melyet 3 napja kĂ©szĂ­tettĂĽnk vacsorĂˇra, de rĂˇnk maradt.",
-					"category": "9990",
-					"price": 100,
-					"is_available": true,
-					"created_at": "2019-10-19T13:34:33.946",
-					"updated_at": "2019-10-19T13:34:33.946"
-				  }
- 
-* **Error Response:**
+-   **Success Response:**
 
-  * **Code:** 404 NOT FOUND <br />
+-   **Code:** 200  
+    **Content:** { "id": 5, "title": "DĂ©li bĂĽfĂ© szendvics", "imgUrl":
+    "saddsaasd", "description": "Klasszikus mirelithĂşsos csoda, melyet 3 napja
+    kĂ©szĂ­tettĂĽnk vacsorĂˇra, de rĂˇnk maradt.", "category": "9990", "price":
+    100, "is_available": true, "created_at": "2019-10-19T13:34:33.946",
+    "updated_at": "2019-10-19T13:34:33.946" }
+
+-   **Error Response:**
+
+-   **Code:** 404 NOT FOUND  
     **Content:** `{ error : "Error" }`
 
-  OR
+OR
 
-  * **Code:** 401 UNAUTHORIZED <br />
+-   **Code:** 401 UNAUTHORIZED  
     **Content:** `{ error : "You are unauthorized to make this request." }`
 
 ### ------------------------------------------------------------------------------------
 
-* **URL**
+/foods
 
-  /foods
+-   **Method:**
 
-* **Method:**
+`POST`
 
-  `POST`
-  
-*  **URL Params**
+-   **URL Params**
 
-	None
+-   None
 
-* **Data Params**
+-   **Data Params**
 
-	
-	body: 
-	  {
-		"title": "DĂ©li bĂĽfĂ© szendvics",
-		"imgUrl": "saddsaasd",
-		"description": "Klasszikus mirelithĂşsos csoda, melyet 3 napja kĂ©szĂ­tettĂĽnk vacsorĂˇra, de rĂˇnk maradt.",
-		"category": "9990",
-		"price": 100,
-		"is_available": true,
-		"created_at": "2019-10-19T13:34:33.946",
-		"updated_at": "2019-10-19T13:34:33.946"
-	  }
+-   body: { "title": "DĂ©li bĂĽfĂ© szendvics", "imgUrl": "saddsaasd",
+    "description": "Klasszikus mirelithĂşsos csoda, melyet 3 napja
+    kĂ©szĂ­tettĂĽnk vacsorĂˇra, de rĂˇnk maradt.", "category": "9990", "price":
+    100, "is_available": true, "created_at": "2019-10-19T13:34:33.946",
+    "updated_at": "2019-10-19T13:34:33.946" }
 
-* **Success Response:**
+-   **Success Response:**
 
-  * **Code:** 200 <br />
-    **Content:** 
-			  {
-				"id": 5,
-				"title": "DĂ©li bĂĽfĂ© szendvics",
-				"imgUrl": "saddsaasd",
-				"description": "Klasszikus mirelithĂşsos csoda, melyet 3 napja kĂ©szĂ­tettĂĽnk vacsorĂˇra, de rĂˇnk maradt.",
-				"category": "9990",
-				"price": 100,
-				"is_available": true,
-				"created_at": "2019-10-19T13:34:33.946",
-				"updated_at": "2019-10-19T13:34:33.946"
-			  }
-		 
-* **Error Response:**
+-   **Code:** 200  
+    **Content:** { "id": 5, "title": "DĂ©li bĂĽfĂ© szendvics", "imgUrl":
+    "saddsaasd", "description": "Klasszikus mirelithĂşsos csoda, melyet 3 napja
+    kĂ©szĂ­tettĂĽnk vacsorĂˇra, de rĂˇnk maradt.", "category": "9990", "price":
+    100, "is_available": true, "created_at": "2019-10-19T13:34:33.946",
+    "updated_at": "2019-10-19T13:34:33.946" }
 
-  * **Code:** 404 NOT FOUND <br />
+-   **Error Response:**
+
+-   **Code:** 404 NOT FOUND  
     **Content:** `{ error : "Error" }`
 
-  OR
+OR
 
   * **Code:** 401 UNAUTHORIZED <br />
     **Content:** `{ error : "You are unauthorized to make this request." }`###
     
 ### ------------------------------------------------------------------------------------
 
-* **URL**
+-   **URL**
 
-  /foods
+/foods
 
-* **Method:**
+-   **Method:**
 
-  `PUT`
-  
-*  **URL Params**
+`PUT`
 
-	/id
+-   **URL Params**
 
-* **Data Params**
+-   /id
 
-	
-	body: 
-		  {
-			"title": "DĂ©li bĂĽfĂ© szendvics",
-			"imgUrl": "saddsaasd",
-			"description": "Klasszikus mirelithĂşsos csoda, melyet 3 napja kĂ©szĂ­tettĂĽnk vacsorĂˇra, de rĂˇnk maradt.",
-			"category": "9990",
-			"price": 100,
-			"is_available": true,
-			"created_at": "2019-10-19T13:34:33.946",
-			"updated_at": "2019-10-19T13:34:33.946"
-		  }
+-   **Data Params**
 
-* **Success Response:**
+-   body: { "title": "DĂ©li bĂĽfĂ© szendvics", "imgUrl": "saddsaasd",
+    "description": "Klasszikus mirelithĂşsos csoda, melyet 3 napja
+    kĂ©szĂ­tettĂĽnk vacsorĂˇra, de rĂˇnk maradt.", "category": "9990", "price":
+    100, "is_available": true, "created_at": "2019-10-19T13:34:33.946",
+    "updated_at": "2019-10-19T13:34:33.946" }
 
-  * **Code:** 200 <br />
-    **Content:** 
-			  {
-				"id": 5,
-				"title": "DĂ©li bĂĽfĂ© szendvics",
-				"imgUrl": "saddsaasd",
-				"description": "Klasszikus mirelithĂşsos csoda, melyet 3 napja kĂ©szĂ­tettĂĽnk vacsorĂˇra, de rĂˇnk maradt.",
-				"category": "9990",
-				"price": 100,
-				"is_available": true,
-				"created_at": "2019-10-19T13:34:33.946",
-				"updated_at": "2019-10-19T13:34:33.946"
-			  }
-		 
-* **Error Response:**
+-   **Success Response:**
 
-  * **Code:** 404 NOT FOUND <br />
+-   **Code:** 200  
+    **Content:** { "id": 5, "title": "DĂ©li bĂĽfĂ© szendvics", "imgUrl":
+    "saddsaasd", "description": "Klasszikus mirelithĂşsos csoda, melyet 3 napja
+    kĂ©szĂ­tettĂĽnk vacsorĂˇra, de rĂˇnk maradt.", "category": "9990", "price":
+    100, "is_available": true, "created_at": "2019-10-19T13:34:33.946",
+    "updated_at": "2019-10-19T13:34:33.946" }
+
+-   **Error Response:**
+
+-   **Code:** 404 NOT FOUND  
     **Content:** `{ error : "Error" }`
 
-  OR
+OR
 
   * **Code:** 401 UNAUTHORIZED <br />
     **Content:** `{ error : "You are unauthorized to make this request." }`###
 	
 ### ------------------------------------------------------------------------------------
 
-* **URL**
+-   **URL**
 
-  /foods
+/foods
 
-* **Method:**
+-   **Method:**
 
-  `DELETE`
-  
-*  **URL Params**
+`DELETE`
 
-	/id
+-   **URL Params**
 
-* **Data Params**
+-   /id
 
-	None
+-   **Data Params**
 
-* **Success Response:**
+-   None
 
-  * **Code:** 200 <br />
+-   **Success Response:**
+
+-   **Code:** 200  
     **Content:** None
- 
-* **Error Response:**
 
-  * **Code:** 404 NOT FOUND <br />
+-   **Error Response:**
+
+-   **Code:** 404 NOT FOUND  
     **Content:** `{ error : "Error" }`
 
-  OR
+OR
 
-  * **Code:** 401 UNAUTHORIZED <br />
+-   **Code:** 401 UNAUTHORIZED  
     **Content:** `{ error : "You are unauthorized to make this request." }`
     
 ### ------------------------------------------------------------------------------------	
 
 * **URL**
 
-  /guests
+-   **URL**
 
-* **Method:**
+/guests
 
-  `GET`
-  
-*  **URL Params**
+-   **Method:**
 
-	None
+`GET`
 
-* **Data Params**
+-   **URL Params**
 
-	None
+-   None
 
-* **Success Response:**
+-   **Data Params**
 
-  * **Code:** 200 <br />
-    **Content:** 	[
-					  {
-						"id": 1,
-						"bill": "8765",
-						"code": null
-					  },
-					  {
-						"id": 2,
-						"bill": "3650",
-						"code": null
-					  },
-					  {
-						"id": 3,
-						"bill": "8765",
-						"code": "aezakmi"
-					  }
-					]
- 
-* **Error Response:**
+-   None
 
-  * **Code:** 404 NOT FOUND <br />
+-   **Success Response:**
+
+-   **Code:** 200  
+    **Content:** [ { "id": 1, "bill": "8765", "code": null }, { "id": 2, "bill":
+    "3650", "code": null }, { "id": 3, "bill": "8765", "code": "aezakmi" } ]
+
+-   **Error Response:**
+
+-   **Code:** 404 NOT FOUND  
     **Content:** `{ error : "Error" }`
 
-  OR
+OR
 
-  * **Code:** 401 UNAUTHORIZED <br />
+-   **Code:** 401 UNAUTHORIZED  
     **Content:** `{ error : "You are unauthorized to make this request." }`
 	
 ### ------------------------------------------------------------------------------------
 
-* **URL**
+-   **URL**
 
-  /guests
+/guests
 
-* **Method:**
+-   **Method:**
 
-  `GET`
-  
-*  **URL Params**
+`GET`
 
-	/id
+-   **URL Params**
 
-* **Data Params**
+-   /id
 
-	None
+-   **Data Params**
 
-* **Success Response:**
+-   None
 
-  * **Code:** 200 <br />
-    **Content:** 
-				  {
-					"id": 3,
-					"bill": "8765",
-					"code": "aezakmi"
-				  }
- 
-* **Error Response:**
+-   **Success Response:**
 
-  * **Code:** 404 NOT FOUND <br />
+-   **Code:** 200  
+    **Content:** { "id": 3, "bill": "8765", "code": "aezakmi" }
+
+-   **Error Response:**
+
+-   **Code:** 404 NOT FOUND  
     **Content:** `{ error : "Error" }`
 
-  OR
+OR
 
-  * **Code:** 401 UNAUTHORIZED <br />
+-   **Code:** 401 UNAUTHORIZED  
     **Content:** `{ error : "You are unauthorized to make this request." }`
 
 ### ------------------------------------------------------------------------------------
 
-* **URL**
+/guests
 
-  /guests
+-   **Method:**
 
-* **Method:**
+`POST`
 
-  `POST`
-  
-*  **URL Params**
+-   **URL Params**
 
-	None
+-   None
 
-* **Data Params**
+-   **Data Params**
 
-				  {
-					"bill": "8765",
-					"code": "aezakmi"
-				  }
+-   {  
+    "bill": "8765",  
+    "code": "aezakmi"  
+    }
 
-* **Success Response:**
+-   **Success Response:**
 
-  * **Code:** 200 <br />
-    **Content:** 
-				  {
-					"id": 3,
-					"bill": "8765",
-					"code": "aezakmi"
-				  }
-		 
-* **Error Response:**
+-   **Code:** 200  
+    **Content:** { "id": 3, "bill": "8765", "code": "aezakmi" }
 
-  * **Code:** 404 NOT FOUND <br />
+-   **Error Response:**
+
+-   **Code:** 404 NOT FOUND  
     **Content:** `{ error : "Error" }`
 
-  OR
+OR
 
-  * **Code:** 401 UNAUTHORIZED <br />
-    **Content:** `{ error : "You are unauthorized to make this request." }`###
+-   **Code:** 401 UNAUTHORIZED  
+    **Content:** `{ error : "You are unauthorized to make this request."
+    }`\#\#\#
 
-* **URL**
+-   **URL**
 
-  /guests
+/guests
 
-* **Method:**
+-   **Method:**
 
-  `PUT`
-  
-*  **URL Params**
+`PUT`
 
-	/id
+-   **URL Params**
 
-* **Data Params**
+-   /id
 
-	
-	body: 
-	  {
-		"bill": "8765",
-		"code": "aezakmi"
-	  }
+-   **Data Params**
 
-* **Success Response:**
+-   body: { "bill": "8765", "code": "aezakmi" }
 
-  * **Code:** 200 <br />
-    **Content:** 
-			  {
-				"id": 3,
-				"bill": "8765",
-				"code": "aezakmi"
-			  }
-* **Error Response:**
+-   **Success Response:**
 
-  * **Code:** 404 NOT FOUND <br />
+-   **Code:** 200  
+    **Content:** { "id": 3, "bill": "8765", "code": "aezakmi" }
+
+-   **Error Response:**
+
+-   **Code:** 404 NOT FOUND  
     **Content:** `{ error : "Error" }`
 
-  OR
+OR
 
   * **Code:** 401 UNAUTHORIZED <br />
     **Content:** `{ error : "You are unauthorized to make this request." }`###
 	
 ### ------------------------------------------------------------------------------------
 
-* **URL**
+-   **URL**
 
-  /guests
+/guests
 
-* **Method:**
+-   **Method:**
 
-  `DELETE`
-  
-*  **URL Params**
+`DELETE`
 
-	/id
+-   **URL Params**
 
-* **Data Params**
+-   /id
 
-	None
+-   **Data Params**
 
-* **Success Response:**
+-   None
 
-  * **Code:** 200 <br />
+-   **Success Response:**
+
+-   **Code:** 200  
     **Content:** None
- 
-* **Error Response:**
 
-  * **Code:** 404 NOT FOUND <br />
+-   **Error Response:**
+
+-   **Code:** 404 NOT FOUND  
     **Content:** `{ error : "Error" }`
 
-  OR
+OR
 
-  * **Code:** 401 UNAUTHORIZED <br />
+-   **Code:** 401 UNAUTHORIZED  
     **Content:** `{ error : "You are unauthorized to make this request." }`
 
 ### ------------------------------------------------------------------------------------
@@ -1123,223 +869,180 @@
 
   /orders
 
-* **Method:**
+-   **Method:**
 
-  `GET`
-  
-*  **URL Params**
+`GET`
 
-	None
+-   **URL Params**
 
-* **Data Params**
+-   None
 
-	None
+-   **Data Params**
 
-* **Success Response:**
+-   None
 
-  * **Code:** 200 <br />
-    **Content:** 	[
-						  {
-							"id": 1,
-							"order_id": 1,
-							"title": "Staropramen",
-							"price": 690,
-							"created_at": "2019-10-19T13:34:33.962",
-							"updated_at": "2019-10-19T13:34:33.962"
-						  },
-						  {
-							"id": 2,
-							"order_id": 2,
-							"title": "GulyĂˇsleves",
-							"price": 1190,
-							"created_at": "2019-10-19T13:34:33.962",
-							"updated_at": "2019-10-19T13:34:33.962"
-						  },
-						  {
-							"id": 3,
-							"order_id": 3,
-							"title": "Cordon Blue",
-							"price": 2390,
-							"created_at": "2019-10-19T13:34:33.962",
-							"updated_at": "2019-10-19T13:34:33.962"
-						  }
-					]
- 
-* **Error Response:**
+-   **Success Response:**
 
-  * **Code:** 404 NOT FOUND <br />
+-   **Code:** 200  
+    **Content:** [ { "id": 1, "order_id": 1, "title": "Staropramen", "price":
+    690, "created_at": "2019-10-19T13:34:33.962", "updated_at":
+    "2019-10-19T13:34:33.962" }, { "id": 2, "order_id": 2, "title":
+    "GulyĂˇsleves", "price": 1190, "created_at": "2019-10-19T13:34:33.962",
+    "updated_at": "2019-10-19T13:34:33.962" }, { "id": 3, "order_id": 3,
+    "title": "Cordon Blue", "price": 2390, "created_at":
+    "2019-10-19T13:34:33.962", "updated_at": "2019-10-19T13:34:33.962" } ]
+
+-   **Error Response:**
+
+-   **Code:** 404 NOT FOUND  
     **Content:** `{ error : "Error" }`
 
-  OR
+OR
 
-  * **Code:** 401 UNAUTHORIZED <br />
+-   **Code:** 401 UNAUTHORIZED  
     **Content:** `{ error : "You are unauthorized to make this request." }`
 	
 ### ------------------------------------------------------------------------------------
 
-* **URL**
+-   **URL**
 
-  /orders
+/orders
 
-* **Method:**
+-   **Method:**
 
-  `GET`
-  
-*  **URL Params**
+`GET`
 
-	/id
+-   **URL Params**
 
-* **Data Params**
+-   /id
 
-	None
+-   **Data Params**
 
-* **Success Response:**
+-   None
 
-  * **Code:** 200 <br />
-    **Content:** 
-				  {
-					"id": 3,
-					"order_id": 3,
-					"title": "Cordon Blue",
-					"price": 2390,
-					"created_at": "2019-10-19T13:34:33.962",
-					"updated_at": "2019-10-19T13:34:33.962"
-				  }
-* **Error Response:**
+-   **Success Response:**
 
-  * **Code:** 404 NOT FOUND <br />
+-   **Code:** 200  
+    **Content:** { "id": 3, "order_id": 3, "title": "Cordon Blue", "price":
+    2390, "created_at": "2019-10-19T13:34:33.962", "updated_at":
+    "2019-10-19T13:34:33.962" }
+
+-   **Error Response:**
+
+-   **Code:** 404 NOT FOUND  
     **Content:** `{ error : "Error" }`
 
-  OR
+OR
 
-  * **Code:** 401 UNAUTHORIZED <br />
+-   **Code:** 401 UNAUTHORIZED  
     **Content:** `{ error : "You are unauthorized to make this request." }`
 
 ### ------------------------------------------------------------------------------------
 
-* **URL**
+/orders
 
-  /orders
+-   **Method:**
 
-* **Method:**
+`POST`
 
-  `POST`
-  
-*  **URL Params**
+-   **URL Params**
 
-	None
+-   None
 
-* **Data Params**
+-   **Data Params**
 
-				  {
-					"order_id": 3,
-					"title": "Cordon Blue",
-					"price": 2390,
-					"created_at": "2019-10-19T13:34:33.962",
-					"updated_at": "2019-10-19T13:34:33.962"
-				  }
+-   {  
+    "order_id": 3,  
+    "title": "Cordon Blue",  
+    "price": 2390,  
+    "created_at": "2019-10-19T13:34:33.962",  
+    "updated_at": "2019-10-19T13:34:33.962"  
+    }
 
-* **Success Response:**
+-   **Success Response:**
 
-  * **Code:** 200 <br />
-    **Content:** 
-				  {
-					"id": 3,
-					"order_id": 3,
-					"title": "Cordon Blue",
-					"price": 2390,
-					"created_at": "2019-10-19T13:34:33.962",
-					"updated_at": "2019-10-19T13:34:33.962"
-				  }
-		 
-* **Error Response:**
+-   **Code:** 200  
+    **Content:** { "id": 3, "order_id": 3, "title": "Cordon Blue", "price":
+    2390, "created_at": "2019-10-19T13:34:33.962", "updated_at":
+    "2019-10-19T13:34:33.962" }
 
-  * **Code:** 404 NOT FOUND <br />
+-   **Error Response:**
+
+-   **Code:** 404 NOT FOUND  
     **Content:** `{ error : "Error" }`
 
-  OR
+OR
 
-  * **Code:** 401 UNAUTHORIZED <br />
-    **Content:** `{ error : "You are unauthorized to make this request." }`###
+-   **Code:** 401 UNAUTHORIZED  
+    **Content:** `{ error : "You are unauthorized to make this request."
+    }`\#\#\#
 
-* **URL**
+-   **URL**
 
-  /orders
+/orders
 
-* **Method:**
+-   **Method:**
 
-  `PUT`
-  
-*  **URL Params**
+`PUT`
 
-	/id
+-   **URL Params**
 
-* **Data Params**
+-   /id
 
-	
-	body: 
-		  {
-			"id": 3,
-			"order_id": 3,
-			"title": "Cordon Blue",
-			"price": 2390,
-			"created_at": "2019-10-19T13:34:33.962",
-			"updated_at": "2019-10-19T13:34:33.962"
-		  }
+-   **Data Params**
 
-* **Success Response:**
+-   body: { "id": 3, "order_id": 3, "title": "Cordon Blue", "price": 2390,
+    "created_at": "2019-10-19T13:34:33.962", "updated_at":
+    "2019-10-19T13:34:33.962" }
 
-  * **Code:** 200 <br />
-    **Content:** 
-			  {
-				"id": 3,
-				"order_id": 3,
-				"title": "Cordon Blue",
-				"price": 2390,
-				"created_at": "2019-10-19T13:34:33.962",
-				"updated_at": "2019-10-19T13:34:33.962"
-			  }
-* **Error Response:**
+-   **Success Response:**
 
-  * **Code:** 404 NOT FOUND <br />
+-   **Code:** 200  
+    **Content:** { "id": 3, "order_id": 3, "title": "Cordon Blue", "price":
+    2390, "created_at": "2019-10-19T13:34:33.962", "updated_at":
+    "2019-10-19T13:34:33.962" }
+
+-   **Error Response:**
+
+-   **Code:** 404 NOT FOUND  
     **Content:** `{ error : "Error" }`
 
-  OR
+OR
 
   * **Code:** 401 UNAUTHORIZED <br />
     **Content:** `{ error : "You are unauthorized to make this request." }`###
 	
 ### ------------------------------------------------------------------------------------
 
-* **URL**
+-   **URL**
 
-  /orders
+/orders
 
-* **Method:**
+-   **Method:**
 
-  `DELETE`
-  
-*  **URL Params**
+`DELETE`
 
-	/id
+-   **URL Params**
 
-* **Data Params**
+-   /id
 
-	None
+-   **Data Params**
 
-* **Success Response:**
+-   None
 
-  * **Code:** 200 <br />
+-   **Success Response:**
+
+-   **Code:** 200  
     **Content:** None
- 
-* **Error Response:**
 
-  * **Code:** 404 NOT FOUND <br />
+-   **Error Response:**
+
+-   **Code:** 404 NOT FOUND  
     **Content:** `{ error : "Error" }`
 
-  OR
+OR
 
-  * **Code:** 401 UNAUTHORIZED <br />
+-   **Code:** 401 UNAUTHORIZED  
     **Content:** `{ error : "You are unauthorized to make this request." }`
     
 ### ------------------------------------------------------------------------------------
