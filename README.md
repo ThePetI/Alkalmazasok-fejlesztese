@@ -1078,4 +1078,6 @@ OR
     * **CustomBasicAuthenticationEntryPoint.java**
     * **MyUserDetailsService.java**
     * **WebSecurityConfig.java**
-	
+=============================================================
+
+* **UML es szekvenciadiagram a gyoker mappaban talalhato.**
